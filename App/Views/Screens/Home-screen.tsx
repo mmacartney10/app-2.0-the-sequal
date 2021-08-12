@@ -5,6 +5,13 @@ import { ScreenProps, AppScreens } from 'Views/Routing';
 import { increment, decrement, incrementByAmount } from 'counter-reducer';
 import { useAppDispatch, useAppSelector } from 'hooks';
 
+import styled from 'styled-components/native';
+
+const TextTst = styled.Text`
+  font-size: 50px;
+  color: blue;
+`;
+
 export function HomeScreen({ route, navigation } : ScreenProps) {
 
     const count = useAppSelector(state => state.counter.value)
@@ -19,6 +26,8 @@ export function HomeScreen({ route, navigation } : ScreenProps) {
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>{route.name} Screen</Text>
             <Text>{count}</Text>
+
+            <TextTst>BOb</TextTst>
 
             <TouchableHighlight onPress={() => navigate() } style={styles.button}>
                 <Text>Go to About Screen</Text>
