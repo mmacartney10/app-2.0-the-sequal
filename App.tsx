@@ -1,14 +1,15 @@
 import * as React from 'react';
 import { View, Text } from 'react-native'
 import Routing from 'Views/Routing';
+import { Provider } from 'react-redux';
+import store from 'store';
 
 function App() {
     return (
-        <View>
-            <Text>thos os bob</Text>
+        <Provider store={store}>
             <Routing />
-        </View>
+        </Provider>
     );
 }
 
-export default Routing;
+export default App;
